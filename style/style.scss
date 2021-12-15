@@ -1,0 +1,22 @@
+$bgColor: rgb(247, 148, 28);
+$color: #ffffff;
+
+@mixin bgColorAndColor($paddingOlcham, $textTuri: lowercase, $radius: 0px) {
+    background-color: $bgColor;
+    color: $color;
+    padding: $paddingOlcham;
+    text-transform: $textTuri;
+    border-radius: $radius;
+}
+
+h1 {
+    @include bgColorAndColor($paddingOlcham: 10px, $radius: 20px);
+}
+
+p {
+    @include bgColorAndColor(15px, uppercase, 20px);
+}
+
+div {
+    @include bgColorAndColor(20px, capitalize);
+}
